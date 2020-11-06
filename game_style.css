@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    background-color: #888888;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+  }
+  
+  .game {
+    justify-content: center;
+    width: 1100px;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    /* border: 2px solid red; */
+  }
+  
+  .card-column {
+    padding: 50px 0;
+    width: 140px;
+    height: 100%;
+    /* border: 2px solid lime; */
+  }
+  
+  .card {
+    padding-bottom: 15px;
+    margin: auto;
+    width: 120px;
+    height: 200px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    /* border: 2px solid aqua; */
+  }
+  
+  .image.selected {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px #2f2f2f;
+    background-color: #2f2f2f;
+  }
+  
+  .image.hint {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px red;
+    background-color: red;
+  }
+  
+  .card:hover {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  
+  .card:active {
+    transform: scale(1.03);
+    transition: transform 0.2s;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  /* .image.shake{
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      animation: shake 0.5s;
+      animation-fill-mode: forwards;
+    } */
+  
+  .stopwatch {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin: 5px;
+  }
+  /* 
+  .stopwatch span {
+      font-weight: bold;
+      display: block;
+  }
+  .stopwatch a {
+      padding-right: 5px;
+      text-decoration: none;
+  } */
+  
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
