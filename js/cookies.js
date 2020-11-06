@@ -24,8 +24,10 @@ function setCookie(cname, cvalue, exdays) {
     var user = getCookie("username");
     if (user != "") {
       alert("Welcome again " + user);
+      setCookie("username", user, 0);
     } else {
-      user = prompt("Please enter your name:", "");
+    alert("Welcome to Thief Mage...");
+      user = prompt("Enter your desired mage name:", "");
       if (user != "" && user != null) {
         setCookie("username", user, 365);
       }
