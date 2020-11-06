@@ -1,0 +1,4 @@
+NOTES:
+
+1. progress array to track what functionality is available for the player
+2. inventory array to track what values the player has
